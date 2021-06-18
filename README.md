@@ -1,3 +1,15 @@
+<!--
+*** Thanks for checking out the README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+***
+***
+***
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** github_username, repo_name, twitter_handle, email, project_title, project_description
+-->
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -6,7 +18,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-
 <span style="display:block;text-align:center">
 
 [![Made With][made-with-shield]][made-with-url]
@@ -21,29 +32,29 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/th3c0d3br34ker/template">
+  <a href="https://github.com/th3c0d3br34ker/nirvanous">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">README Template</h3>
+  <h3 align="center">Nirvanous</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A full Realtime Chat Application with Social Auth and dedicated chat APIs/sockets.
     <br />
-    <a href="https://github.com/th3c0d3br34ker/template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/th3c0d3br34ker/nirvanous"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/th3c0d3br34ker/template">View Demo</a>
+    <a href="https://github.com/th3c0d3br34ker/nirvanous">View Demo</a>
     ·
-    <a href="https://github.com/th3c0d3br34ker/template/issues">Report Bug</a>
+    <a href="https://github.com/th3c0d3br34ker/nirvanous/issues">Report Bug</a>
     ·
-    <a href="https://github.com/th3c0d3br34ker/template/issues">Request Feature</a>
+    <a href="https://github.com/th3c0d3br34ker/nirvanous/issues">Request Feature</a>
   </p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -62,7 +73,7 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <!-- <li><a href="#acknowledgements">Acknowledgements</a></li> -->
   </ol>
 </details>
 
@@ -72,32 +83,17 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-
-- Your time should be focused on creating something amazing. A project that solves a problem and helps others
-- You shouldn't be doing the same tasks over and over like creating a README from scratch
-- You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-- [Bootstrap](https://getbootstrap.com)
-- [JQuery](https://jquery.com)
-- [Laravel](https://laravel.com)
+- [React](https://reactjs.org)
+- [Firebase](https://firebase.google.com)
+- [Chatengine](https://chatengine.io)
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -110,33 +106,35 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/th3c0d3br34ker/nirvanous.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
    ```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+This project is mainly for educational purpose. Kindly don't spam.
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/th3c0d3br34ker/template/issues) for a list of proposed features (and known issues).
+Add more customized components.
+
+- Chat List
+- Chat Card
+- New Chat Form
+- Chat Feed
+- Chat Header
+- Message Bubble
+- Is Typing
+- New Message Form
 
 <!-- CONTRIBUTING -->
 
@@ -160,23 +158,25 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgements
 
-- [Img Shields](https://shields.io)
+- []()
+- []()
+- []()
 
-> Made with ❤ by Jainam Desai
+> Made with 💙 by Jainam Desai
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/th3c0d3br34ker/template.svg?style=for-the-badge
-[contributors-url]: https://github.com/th3c0d3br34ker/template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/th3c0d3br34ker/template.svg?style=for-the-badge
-[forks-url]: https://github.com/th3c0d3br34ker/template/network/members
-[stars-shield]: https://img.shields.io/github/stars/th3c0d3br34ker/template.svg?style=for-the-badge
-[stars-url]: https://github.com/th3c0d3br34ker/template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/th3c0d3br34ker/template.svg?style=for-the-badge
-[issues-url]: https://github.com/th3c0d3br34ker/template/issues
-[license-shield]: https://img.shields.io/github/license/th3c0d3br34ker/template.svg?style=for-the-badge
-[license-url]: https://github.com/th3c0d3br34ker/template/blob/master/LICENSE.txt
-[made-with-shield]: https://img.shields.io/github/languages/top/th3c0d3br34ker/template.svg?style=for-the-badge
-[made-with-url]: https://shields.io/github/languages/top/th3c0d3br34ker/template.svg?style-for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/th3c0d3br34ker/nirvanous.svg?style=for-the-badge
+[contributors-url]: https://github.com/th3c0d3br34ker/nirvanous/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/th3c0d3br34ker/nirvanous.svg?style=for-the-badge
+[forks-url]: https://github.com/th3c0d3br34ker/nirvanous/network/members
+[stars-shield]: https://img.shields.io/github/stars/th3c0d3br34ker/nirvanous.svg?style=for-the-badge
+[stars-url]: https://github.com/th3c0d3br34ker/nirvanous/stargazers
+[issues-shield]: https://img.shields.io/github/issues/th3c0d3br34ker/nirvanous.svg?style=for-the-badge
+[issues-url]: https://github.com/th3c0d3br34ker/nirvanous/issues
+[license-shield]: https://img.shields.io/github/license/th3c0d3br34ker/nirvanous.svg?style=for-the-badge
+[license-url]: https://github.com/th3c0d3br34ker/nirvanous/blob/master/LICENSE.txt
+[made-with-shield]: https://img.shields.io/github/languages/top/th3c0d3br34ker/nirvanous?style=for-the-badge
+[made-with-url]: https://shields.io/github/languages/top/th3c0d3br34ker/nirvanous.svg?style-for-the-badge
 [product-screenshot]: images/screenshot.png
