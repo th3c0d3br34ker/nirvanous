@@ -4,9 +4,9 @@ import { ChatEngine } from 'react-chat-engine';
 import axios from 'axios';
 
 import { useAuth } from '../contexts/AuthContext';
-import firebaseAuth from '../utils/firebase';
 
-import Loader from './Loader';
+import Loader from '../components/Loader';
+import NavBar from '../components/NavBar';
 
 const getFile = async (url) => {
   let response = await fetch(url);
@@ -32,7 +32,6 @@ const Chats = () => {
             },
           });
 
-          console.log('/users/me');
           setLoading(false);
         } catch (error) {
           let formData = new FormData();
@@ -65,19 +64,9 @@ const Chats = () => {
     // eslint-disable-next-line
   }, []);
 
-  const handleLogout = async () => {
-    await firebaseAuth.signOut();
-    history.push('/');
-  };
-
   return (
     <div className="chats-page">
-      <div className="nav-bar">
-        <div className="logo-tab">Nirvanous</div>
-        <div className="logout-tab" onClick={handleLogout}>
-          Logout
-        </div>
-      </div>
+      <NavBar />
 
       {loading ? (
         <Loader />

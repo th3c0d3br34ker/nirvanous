@@ -105,4 +105,38 @@
   top: calc(50vh - 22px);
 }
 
-/* */
+/* Video Chat App */
+
+.video-player-container {
+  display: flex;
+  width: 100%;
+}
+
+.video-wrapper {
+  padding: 16px;
+  border: 2px solid black;
+  margin: 32px;
+}
+
+.video-container {
+  justify-content: 'center';
+}
+
+.video-player {
+  width: 550px;
+  height: 300px;
+}
+
+.user-subtitle {
+  text-align: center;
+  padding: 0;
+  margin: 8px 0;
+}
+
+button {
+  background-color: #002766;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 16px;
+}

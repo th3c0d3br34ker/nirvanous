@@ -1,9 +1,9 @@
-import '../loading.css';
+import './loader.css';
 
 const Loader = () => {
   return (
     <div className="overlay">
-      <div class="lds-ellipsis">
+      <div className="lds-ellipsis">
         <div></div>
         <div></div>
         <div></div>
