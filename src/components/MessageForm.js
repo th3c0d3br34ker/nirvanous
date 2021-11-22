@@ -5,10 +5,19 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 import Button from '@material-ui/core/Button';
 import InputBase from '@material-ui/core/InputBase';
 import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
 
 import { sendMessage, isTyping } from 'react-chat-engine';
 
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    margin: '1rem',
+  },
+});
+
 const MessageForm = (props) => {
+  const classes = useStyles();
   const [value, setValue] = useState('');
   const { chatId, creds } = props;
 
@@ -35,7 +44,12 @@ const MessageForm = (props) => {
   };
 
   return (
-    <Paper conponent="form" elevation={0} onSubmit={handleSubmit}>
+    <Paper
+      conponent="form"
+      elevation={0}
+      onSubmit={handleSubmit}
+      className={classes.root}
+    >
       <label htmlFor="contained-button-file">
         <Button>
           <AttachFileIcon />
