@@ -68,8 +68,9 @@ const ChatFeed = (props) => {
         <div className="chat-title">{chat?.title}</div>
         <div className="chat-subtitle">
           <AvatarGroup max={4}>
-            {chat.people.map((person) => (
+            {chat.people.map((person, index) => (
               <Avatar
+                key={`avatar_${index}`}
                 alt={person.person.username}
                 src="/static/images/avatar/1.jpg"
               />
