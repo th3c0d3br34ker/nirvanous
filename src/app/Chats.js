@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { ChatEngine } from 'react-chat-engine';
+
 import axios from 'axios';
 
 import { useAuth } from '../contexts/AuthContext';
 
 import Loader from '../components/Loader';
 import NavBar from '../components/NavBar';
+import ChatFeed from '../components/ChatFeed';
 
 const getFile = async (url) => {
   let response = await fetch(url);
@@ -76,6 +78,7 @@ const Chats = () => {
           projectID={process.env.REACT_APP_CHATENGINE_ID}
           userName={currentUser?.email}
           userSecret={currentUser?.uid}
+          renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
         />
       )}
     </div>

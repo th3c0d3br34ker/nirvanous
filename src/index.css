@@ -140,3 +140,12 @@ button {
   border: none;
   padding: 16px;
 }
+
+.data {
+  --blue-pigment: #4c35a3ff;
+  --rich-black-fogra-29: #121828ff;
+  --dark-purple: #1e1132ff;
+  --rose-vale: #a75356ff;
+  --xiketic: #0a0a17ff;
+  --majorelle-blue: #7b4ad9ff;
+}
