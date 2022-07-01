@@ -2,19 +2,12 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { ChatEngine } from 'react-chat-engine';
 
-import axios from 'axios';
+import { useAuth } from 'contexts/AuthContext';
 
-import { useAuth } from '../contexts/AuthContext';
-
-import Loader from '../components/Loader';
-import NavBar from '../components/NavBar';
-import ChatFeed from '../components/ChatFeed';
-
-const getFile = async (url) => {
-  let response = await fetch(url);
-  let data = await response.blob();
-  return new File([data], 'test.jpg', { type: 'image/jpeg' });
-};
+import Loader from 'components/Loader';
+import NavBar from 'components/NavBar';
+import { CHAT_ENGINE_ID } from 'utils/config';
+import { fetchMe, getFile } from 'api';
 
 const Chats = () => {
   const { currentUser } = useAuth();
@@ -26,13 +19,7 @@ const Chats = () => {
     const getUser = async () => {
       if (currentUser) {
         try {
-          await axios.get('https://api.chatengine.io/users/me', {
-            headers: {
-              'project-id': process.env.REACT_APP_CHATENGINE_ID,
-              'user-name': currentUser?.email,
-              'user-secret': currentUser?.uid,
-            },
-          });
+          await fetchMe(currentUser);
 
           setLoading(false);
         } catch (error) {
@@ -47,11 +34,7 @@ const Chats = () => {
             formData.append('avatar', avatar, avatar.name);
           }
 
-          await axios.post('https://api.chatengine.io/users/', formData, {
-            headers: {
-              'private-key': process.env.REACT_APP_CHATENGINE_KEY,
-            },
-          });
+          await createUser(formData);
 
           setLoading(false);
         }
@@ -75,10 +58,9 @@ const Chats = () => {
       ) : (
         <ChatEngine
           height="calc(100vh - 66px)"
-          projectID={process.env.REACT_APP_CHATENGINE_ID}
+          projectID={CHAT_ENGINE_ID}
           userName={currentUser?.email}
           userSecret={currentUser?.uid}
-          renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
         />
       )}
     </div>

@@ -1,5 +1,11 @@
 import { useState } from 'react';
-import { useSocket } from '../contexts/SocketContext';
+import { useSocket } from 'contexts/SocketContext';
+
+import CallIcon from '@material-ui/icons/Call';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import IconButton from '@material-ui/core/IconButton';
 
 const Options = ({ children }) => {
   const [idToCall, setIdToCall] = useState('');
@@ -14,7 +20,23 @@ const Options = ({ children }) => {
           <div className="grid-item">
             <h6>Account Info</h6>
             <label htmlFor="name">ID: </label>
-            <input type="text" id="name" value={me} readOnly />
+            <TextField
+              type="text"
+              id="name"
+              value={me}
+              readOnly
+              InputProps={{
+                endAdornment: (
+                  <IconButton
+                    aria-label="Copy ID"
+                    onClick={() => {}}
+                    onMouseDown={() => {}}
+                  >
+                    <FileCopyIcon />
+                  </IconButton>
+                ),
+              }}
+            />
           </div>
         </div>
 
@@ -25,7 +47,7 @@ const Options = ({ children }) => {
           <div className="grid-item">
             <h6>Make a Call</h6>
             <label htmlFor="name">ID To Call</label>
-            <input
+            <TextField
               type="text"
               id="id-to-call"
               value={idToCall}
@@ -34,9 +56,16 @@ const Options = ({ children }) => {
             <br />
             <br />
             {callAccepted && !callEnded ? (
-              <button onClick={leaveCall}>Hang Up</button>
+              <Button onClick={leaveCall}>Hang Up</Button>
             ) : (
-              <button onClick={() => callUser(idToCall)}>Call</button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => callUser(idToCall)}
+                startIcon={<CallIcon />}
+              >
+                Call
+              </Button>
             )}
           </div>
         </div>

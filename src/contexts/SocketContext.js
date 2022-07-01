@@ -2,10 +2,11 @@ import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import Peer from 'simple-peer';
 import { useAuth } from './AuthContext';
+import { VIDEO_CHAT_SERVER_URL } from 'utils/config';
 
 const SocketContext = createContext();
 
-const socket = io(process.env.REACT_APP_VIDEO_CHAT_SERVER_URL);
+const socket = io(VIDEO_CHAT_SERVER_URL);
 
 export const useSocket = () => useContext(SocketContext);
 

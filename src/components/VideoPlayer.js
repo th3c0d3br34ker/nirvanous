@@ -1,12 +1,11 @@
-import { useAuth } from '../contexts/AuthContext';
-import { useSocket } from '../contexts/SocketContext';
+import { useAuth } from 'contexts/AuthContext';
+import { useSocket } from 'contexts/SocketContext';
 
 const VideoPlayer = () => {
   const { myVideo, userVideo, stream, call, callAccepted, callEnded } =
     useSocket();
   const { currentUser } = useAuth();
 
-  // console.log(myVideo);
   return (
     <div className="video-player-container">
       {stream && (

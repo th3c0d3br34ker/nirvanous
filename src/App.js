@@ -4,10 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Loader from './components/Loader';
 
-// import Chats from './Chats';
-// import Login from './Login';
-// import VideoChat from './VideoChat';
-
 const Chats = lazy(() => import('./app/Chats'));
 const Login = lazy(() => import('./app/Login'));
 const VideoChat = lazy(() => import('./app/VideoChat'));
